@@ -1,0 +1,31 @@
+﻿@model EntityLayer.Concrete.Catagory
+@{
+    Layout = null;
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<h2>salam</h2>
+<br />
+
+@using (Html.BeginForm("AddCatagory","Catagory",FormMethod.Post))
+            {
+    <div class="form-group">
+        @Html.Label("Kategori adi")
+        @Html.TextBoxFor(x=>x.CatagoryName)
+        @Html.ValidationMessageFor(x=>x.CatagoryName)
+        <br /><br />
+        @Html.Label("Aciklama yazin")
+        @Html.TextBoxFor(x=>x.CatagoryDescription)
+        @Html.ValidationMessageFor(x=>x.CatagoryDescription)
+        <br /><br />
+        <button>kaydet</button>
+
+    </div>
+
+            }
+
+@*<form class="form-group" method="post">
+    <input type="text" placeholder="Kategori adi" name="CatagoryName" class="form-control"/>
+    <button class="btn btn-primary">ekle</button>
+</form>*@
+
+
